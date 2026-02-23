@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #050a1f, #0a1f44);
+    font-family: 'Segoe UI', sans-serif;
+    color: #00f7ff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.title {
+    margin-top: 30px;
+    font-size: 2.2rem;
+    text-shadow: 0 0 15px #00f7ff;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    margin: 20px auto;
+    border: 4px solid #00f7ff; /* outer border */
+}
+
+/* Cells */
+input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #081a3a;
+    color: #00f7ff;
+    border: 1px solid #00f7ff;
+    outline: none;
+    box-sizing: border-box;
+}
+/* Thick vertical borders */
+.right-border {
+    border-right: 3px solid #00f7ff !important;
+}
+
+/* Thick horizontal borders */
+.bottom-border {
+    border-bottom: 3px solid #00f7ff !important;
+}
+
+/* Button styling */
+button {
+    margin: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #00f7ff;
+    color: #050a1f;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #00d4ff;
+    transform: scale(1.05);
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}

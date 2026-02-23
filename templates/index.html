@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neon Sudoku Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1 class="title">⚡Photon Sudoku Solver ⚡</h1>
+
+<form method="POST" class="game-container">
+    
+    <div class="grid">
+        {% for i in range(9) %}
+            {% for j in range(9) %}
+                <input type="text"
+                       name="cell-{{i}}-{{j}}"
+                       maxlength="1"
+                       class="
+                       {% if j % 3 == 2 and j != 8 %} right-border {% endif %}
+                       {% if i % 3 == 2 and i != 8 %} bottom-border {% endif %}
+                       "
+                       value="{{ board[i][j] if board[i][j] != 0 else '' }}">
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="buttons">
+        <button type="submit" name="action" value="solve">Solve</button>
+        <button type="submit" name="action" value="reset">Reset</button>
+    </div>
+
+</form>
+
+</body>
+</html>
